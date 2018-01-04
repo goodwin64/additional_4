@@ -1,9 +1,9 @@
 const assert = require('assert');
 const multiply = require('./src/index.js');
-const {
-    multiplyByDigit,
-    addByDigits,
-} = require('./src/helpers.js');
+// const {
+//     multiplyByDigit,
+//     addByDigits,
+// } = require('./src/helpers.js');
 
 it('should multiply 2 numbers and return product 50', () => {
   assert.strictEqual(multiply('5', '10'), '50');
@@ -65,86 +65,86 @@ it('should multiply 2 numbers and return product 8039478803562301312945731536636
   assert.strictEqual(multiply('3467598346538256487395689342653498563412312376095476904769456798433934759347589346587346578342658346285963489253465783', '2318457329865843872563478658342756873375683268326583435452342347346582436583456'), '8039478803562301312945731536636937786946145622033671701077185622708260023194452833705836798934954757818601850586548267694783898227720224627622563294226313567463000537341441969561807100657519886048');
 });
 
-it('should multiply 2 numbers and return product 108', () => {
-  assert.strictEqual(
-      multiplyByDigit('12', '9'),
-      '108'
-  );
-});
-
-it('should multiply 2 numbers and return product 891', () => {
-  assert.strictEqual(
-      multiplyByDigit('99', '9'),
-      '891'
-  );
-});
-
-it('should multiply 2 numbers corner case: 0 * 0', () => {
-  assert.strictEqual(
-      multiplyByDigit('0', '0'),
-      '0'
-  );
-});
-
-it('should multiply 2 numbers corner case: 1 * 1', () => {
-  assert.strictEqual(
-      multiplyByDigit('1', '1'),
-      '1'
-  );
-});
-
-it('should multiply 2 numbers corner case: 10 * 0', () => {
-  assert.strictEqual(
-      multiplyByDigit('10', '0'),
-      '00'
-  );
-});
-
-it('should add 2 numbers, corner case: 0 + 0', () => {
-  assert.strictEqual(
-      addByDigits(['0', '0']),
-      '0'
-  );
-});
-
-it('should add 2 numbers, corner case: 0 + 1', () => {
-  assert.strictEqual(
-      addByDigits(['0', '1']),
-      '1'
-  );
-});
-
-it('should add 2 numbers, corner case: 0 + 10', () => {
-  assert.strictEqual(
-      addByDigits(['0', '10']),
-      '10'
-  );
-});
-
-it('should add 2 numbers, corner case: 10 + 0', () => {
-  assert.strictEqual(
-      addByDigits(['10', '0']),
-      '10'
-  );
-});
-
-it('should add 2 numbers, corner case: 1 + 1', () => {
-  assert.strictEqual(
-      addByDigits(['1', '1']),
-      '2'
-  );
-});
-
-it('should add 2 numbers, corner case: 9 + 9', () => {
-  assert.strictEqual(
-      addByDigits(['9', '9']),
-      '18'
-  );
-});
-
-it('should add 2 numbers, regular case: 5 + 4', () => {
-  assert.strictEqual(
-      addByDigits(['5', '4']),
-      '9'
-  );
-});
+// it('should multiply 2 numbers and return product 108', () => {
+//   assert.strictEqual(
+//       multiplyByDigit('12', '9'),
+//       '108'
+//   );
+// });
+//
+// it('should multiply 2 numbers and return product 891', () => {
+//   assert.strictEqual(
+//       multiplyByDigit('99', '9'),
+//       '891'
+//   );
+// });
+//
+// it('should multiply 2 numbers corner case: 0 * 0', () => {
+//   assert.strictEqual(
+//       multiplyByDigit('0', '0'),
+//       '0'
+//   );
+// });
+//
+// it('should multiply 2 numbers corner case: 1 * 1', () => {
+//   assert.strictEqual(
+//       multiplyByDigit('1', '1'),
+//       '1'
+//   );
+// });
+//
+// it('should multiply 2 numbers corner case: 10 * 0', () => {
+//   assert.strictEqual(
+//       multiplyByDigit('10', '0'),
+//       '00'
+//   );
+// });
+//
+// it('should add 2 numbers, corner case: 0 + 0', () => {
+//   assert.strictEqual(
+//       addByDigits(['0', '0']),
+//       '0'
+//   );
+// });
+//
+// it('should add 2 numbers, corner case: 0 + 1', () => {
+//   assert.strictEqual(
+//       addByDigits(['0', '1']),
+//       '1'
+//   );
+// });
+//
+// it('should add 2 numbers, corner case: 0 + 10', () => {
+//   assert.strictEqual(
+//       addByDigits(['0', '10']),
+//       '10'
+//   );
+// });
+//
+// it('should add 2 numbers, corner case: 10 + 0', () => {
+//   assert.strictEqual(
+//       addByDigits(['10', '0']),
+//       '10'
+//   );
+// });
+//
+// it('should add 2 numbers, corner case: 1 + 1', () => {
+//   assert.strictEqual(
+//       addByDigits(['1', '1']),
+//       '2'
+//   );
+// });
+//
+// it('should add 2 numbers, corner case: 9 + 9', () => {
+//   assert.strictEqual(
+//       addByDigits(['9', '9']),
+//       '18'
+//   );
+// });
+//
+// it('should add 2 numbers, regular case: 5 + 4', () => {
+//   assert.strictEqual(
+//       addByDigits(['5', '4']),
+//       '9'
+//   );
+// });
