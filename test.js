@@ -1,9 +1,16 @@
 const assert = require('assert');
 const multiply = require('./src/index.js');
-const { multiplyByDigit } = require('./src/helpers.js');
+const {
+    multiplyByDigit,
+    addByDigits,
+} = require('./src/helpers.js');
 
 it('should multiply 2 numbers and return product 50', () => {
   assert.strictEqual(multiply('5', '10'), '50');
+});
+
+it('should multiply 2 numbers and return product 100000000', () => {
+  assert.strictEqual(multiply('10', '10'), '100');
 });
 
 it('should multiply 2 numbers and return product 100000000', () => {
@@ -89,6 +96,55 @@ it('should multiply 2 numbers corner case: 1 * 1', () => {
 it('should multiply 2 numbers corner case: 10 * 0', () => {
   assert.strictEqual(
       multiplyByDigit('10', '0'),
+      '00'
+  );
+});
+
+it('should add 2 numbers, corner case: 0 + 0', () => {
+  assert.strictEqual(
+      addByDigits(['0', '0']),
       '0'
+  );
+});
+
+it('should add 2 numbers, corner case: 0 + 1', () => {
+  assert.strictEqual(
+      addByDigits(['0', '1']),
+      '1'
+  );
+});
+
+it('should add 2 numbers, corner case: 0 + 10', () => {
+  assert.strictEqual(
+      addByDigits(['0', '10']),
+      '10'
+  );
+});
+
+it('should add 2 numbers, corner case: 10 + 0', () => {
+  assert.strictEqual(
+      addByDigits(['10', '0']),
+      '10'
+  );
+});
+
+it('should add 2 numbers, corner case: 1 + 1', () => {
+  assert.strictEqual(
+      addByDigits(['1', '1']),
+      '2'
+  );
+});
+
+it('should add 2 numbers, corner case: 9 + 9', () => {
+  assert.strictEqual(
+      addByDigits(['9', '9']),
+      '18'
+  );
+});
+
+it('should add 2 numbers, regular case: 5 + 4', () => {
+  assert.strictEqual(
+      addByDigits(['5', '4']),
+      '9'
   );
 });
