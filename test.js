@@ -1,5 +1,6 @@
 const assert = require('assert');
 const multiply = require('./src/index.js');
+const { multiplyByDigit } = require('./src/helpers.js');
 
 it('should multiply 2 numbers and return product 50', () => {
   assert.strictEqual(multiply('5', '10'), '50');
@@ -55,4 +56,39 @@ it('should multiply 2 numbers and return product 4061432330810867395226739184161
 
 it('should multiply 2 numbers and return product 8039478803562301312945731536636937786946145622033671701077185622708260023194452833705836798934954757818601850586548267694783898227720224627622563294226313567463000537341441969561807100657519886048', () => {
   assert.strictEqual(multiply('3467598346538256487395689342653498563412312376095476904769456798433934759347589346587346578342658346285963489253465783', '2318457329865843872563478658342756873375683268326583435452342347346582436583456'), '8039478803562301312945731536636937786946145622033671701077185622708260023194452833705836798934954757818601850586548267694783898227720224627622563294226313567463000537341441969561807100657519886048');
+});
+
+it('should multiply 2 numbers and return product 108', () => {
+  assert.strictEqual(
+      multiplyByDigit('12', '9'),
+      '108'
+  );
+});
+
+it('should multiply 2 numbers and return product 891', () => {
+  assert.strictEqual(
+      multiplyByDigit('99', '9'),
+      '891'
+  );
+});
+
+it('should multiply 2 numbers corner case: 0 * 0', () => {
+  assert.strictEqual(
+      multiplyByDigit('0', '0'),
+      '0'
+  );
+});
+
+it('should multiply 2 numbers corner case: 1 * 1', () => {
+  assert.strictEqual(
+      multiplyByDigit('1', '1'),
+      '1'
+  );
+});
+
+it('should multiply 2 numbers corner case: 10 * 0', () => {
+  assert.strictEqual(
+      multiplyByDigit('10', '0'),
+      '0'
+  );
 });
